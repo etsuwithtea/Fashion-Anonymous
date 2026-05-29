@@ -13,7 +13,7 @@ export function Collection() {
             <span className="size-1.5 rounded-full bg-ember" />
             <span>§ 03 · The Register · 04 of 24</span>
           </div>
-          <h2 className="font-display text-[14vw] leading-[0.88] tracking-[-0.04em] text-ink md:text-[7.5vw] lg:text-[6.4vw]">
+          <h2 className="font-display text-[13vw] leading-[0.88] tracking-[-0.04em] text-ink md:text-[7.5vw] lg:text-[min(6.4vw,6.75rem)]">
             Penumbra,
             <br />
             <span className="font-italic italic font-normal normal-case text-ember tracking-tight">

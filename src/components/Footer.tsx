@@ -1,11 +1,20 @@
+import { ArrowUp } from "lucide-react";
+import { SiInstagram, SiTiktok, SiX, SiYoutube } from "react-icons/si";
 import { footerLinks } from "../lib/data";
+
+const socials = [
+  { label: "Instagram", icon: <SiInstagram size={14} /> },
+  { label: "TikTok", icon: <SiTiktok size={14} /> },
+  { label: "X", icon: <SiX size={14} /> },
+  { label: "YouTube", icon: <SiYoutube size={14} /> },
+];
 
 export function Footer() {
   return (
     <footer id="boutique" className="relative border-t border-line/80">
       <div className="mx-auto max-w-[1600px] px-4 pt-20 pb-10 md:px-6">
         <div className="mb-14 overflow-hidden">
-          <h3 className="font-display text-[26vw] uppercase leading-[0.78] tracking-[-0.045em] text-ink md:text-[15vw]">
+          <h3 className="font-display text-[23vw] uppercase leading-[0.78] tracking-[-0.045em] text-ink md:text-[min(15vw,15rem)]">
             MAISON
             <span className="font-italic italic font-normal normal-case text-ember tracking-tight"> Vœid</span>
           </h3>
@@ -27,14 +36,14 @@ export function Footer() {
             </p>
 
             <div className="mt-7 flex items-center gap-2">
-              {["IG", "TT", "X", "YT"].map((n) => (
+              {socials.map(({ label, icon }) => (
                 <a
-                  key={n}
+                  key={label}
                   href="#"
-                  aria-label={n}
-                  className="grid size-10 place-items-center rounded-full border border-ink/20 font-mono text-[10px] tracking-[0.15em] text-ink transition-all hover:border-ink hover:bg-ink hover:text-paper"
+                  aria-label={label}
+                  className="grid size-10 place-items-center rounded-full border border-ink/20 text-ink transition-all hover:border-ink hover:bg-ink hover:text-paper"
                 >
-                  {n}
+                  {icon}
                 </a>
               ))}
             </div>
@@ -69,7 +78,7 @@ export function Footer() {
               className="group mt-4 inline-flex items-center gap-3 font-display text-[16px] uppercase tracking-[-0.005em] text-ink md:flex-row-reverse md:text-[18px]"
             >
               <span className="grid size-10 place-items-center rounded-full border border-ink/40 transition-all group-hover:bg-ink group-hover:text-paper">
-                ↑
+                <ArrowUp size={14} />
               </span>
               Top
             </a>

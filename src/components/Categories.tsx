@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 import { collection } from "../lib/data";
 
 export function Categories() {
@@ -10,9 +11,9 @@ export function Categories() {
         <div>
           <div className="mb-4 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-smoke">
             <span className="size-1.5 rounded-full bg-ember" />
-            <span>§ 01 · Latest Drop</span>
+            <span>01 · Latest Drop</span>
           </div>
-          <h2 className="font-display text-[14vw] leading-[0.86] tracking-[-0.035em] text-ink md:text-[6vw] lg:text-[5.4vw]">
+          <h2 className="font-display text-[13vw] leading-[0.86] tracking-[-0.035em] text-ink md:text-[6vw] lg:text-[min(5.4vw,6rem)]">
             New Drops.
           </h2>
           <p className="mt-5 max-w-xl font-sans text-[14px] font-light leading-[1.65] text-smoke md:text-[15px]">
@@ -27,7 +28,7 @@ export function Categories() {
         >
           <span className="link-underline">View all 24 pieces</span>
           <span className="grid size-10 place-items-center rounded-full border border-ink transition-all group-hover:bg-ink group-hover:text-paper">
-            →
+            <ArrowRight size={14} />
           </span>
         </a>
       </div>

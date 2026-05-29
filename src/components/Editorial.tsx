@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 export function Editorial() {
   return (
@@ -7,9 +8,9 @@ export function Editorial() {
         <div className="col-span-12 lg:col-span-8">
           <div className="mb-4 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-smoke">
             <span className="size-1.5 rounded-full bg-ember" />
-            <span>§ 04 · Editorial / Atelier</span>
+            <span>04 · Editorial / Atelier</span>
           </div>
-          <h2 className="font-display text-[12vw] uppercase leading-[0.88] tracking-[-0.035em] text-ink md:text-[5.4vw]">
+          <h2 className="font-display text-[12vw] uppercase leading-[0.88] tracking-[-0.035em] text-ink md:text-[min(5.4vw,5.25rem)]">
             Built by the streets,
             <br />
             <span className="font-italic italic font-normal normal-case text-ember tracking-tight">
@@ -41,9 +42,9 @@ export function Editorial() {
             <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-paper/90 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-ink backdrop-blur">
               Look 022 / 24
             </div>
-            <div className="absolute inset-x-5 bottom-5 flex items-end justify-between font-mono text-[10px] uppercase tracking-[0.25em] text-paper mix-blend-difference">
+            <div className="absolute inset-x-5 bottom-5 flex flex-col items-start gap-1 font-mono text-[10px] uppercase tracking-[0.25em] text-paper mix-blend-difference sm:flex-row sm:items-end sm:justify-between sm:gap-3">
               <span>Soliloquy · Boiled merino · Bone</span>
-              <span aria-hidden>↗ Detail</span>
+              <span aria-hidden className="inline-flex items-center gap-1"><ArrowUpRight size={12} /> Detail</span>
             </div>
           </div>
         </motion.figure>
@@ -60,7 +61,7 @@ export function Editorial() {
             <span>04 / 04</span>
           </div>
 
-          <blockquote className="font-display text-[8vw] leading-[1.0] tracking-[-0.025em] text-paper md:text-[3vw]">
+          <blockquote className="font-display text-[7vw] leading-[1.0] tracking-[-0.025em] text-paper md:text-[min(3vw,3rem)]">
             <span aria-hidden className="font-italic italic font-normal text-ember">“ </span>
             A coat should outlast the room it was bought in.
             <span aria-hidden className="font-italic italic font-normal text-ember"> ”</span>
@@ -78,7 +79,7 @@ export function Editorial() {
             >
               <span>Read the manifesto</span>
               <span className="grid size-7 place-items-center rounded-full bg-ink text-paper transition-transform group-hover:translate-x-0.5">
-                →
+                <ArrowRight size={12} />
               </span>
             </a>
 

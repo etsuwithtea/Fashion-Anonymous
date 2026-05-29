@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { ArrowRight, ArrowDown } from "lucide-react";
 
 const indices = [
   ["01", "Limited Drops, Numbered"],
@@ -51,12 +52,12 @@ export function Hero() {
               <div className="hidden gap-5 md:flex">
                 <span>240 / pieces</span>
                 <span aria-hidden>·</span>
-                <span>Lookbook ↓</span>
+                <span className="inline-flex items-center gap-1">Lookbook <ArrowDown size={10} /></span>
               </div>
             </div>
 
             <div className="flex flex-col justify-end gap-10 pt-16 md:pt-24">
-              <h1 className="font-display text-[14vw] leading-[0.88] tracking-[-0.04em] text-paper md:text-[8.2vw] lg:text-[7.6vw]">
+              <h1 className="font-display text-[7.5vw] leading-[0.92] tracking-[-0.04em] text-paper md:text-[8.2vw] lg:text-[min(7.6vw,8.5rem)]">
                 <span className="clip-rise block">
                   <motion.span {...stagger(0)} className="block">
                     Community-Driven
@@ -93,7 +94,7 @@ export function Hero() {
                   >
                     <span>Shop the Drop</span>
                     <span className="grid size-7 place-items-center rounded-full bg-ink text-paper transition-transform group-hover:translate-x-0.5">
-                      →
+                      <ArrowRight size={12} />
                     </span>
                   </a>
                   <a
@@ -134,7 +135,7 @@ export function Hero() {
 
         <div className="mt-5 flex flex-wrap items-center justify-between gap-3 px-2 font-mono text-[10px] uppercase tracking-[0.25em] text-smoke">
           <span>Photo · Lehmann & fils — Paris · 04 / 26</span>
-          <span>Scroll ↓ to enter the register</span>
+          <span className="inline-flex items-center gap-1">Scroll <ArrowDown size={10} /> to enter the register</span>
         </div>
       </div>
     </section>

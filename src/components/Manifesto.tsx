@@ -12,7 +12,7 @@ export function Manifesto() {
           <div className="sticky top-32 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-smoke md:flex-col md:items-start">
             <span className="flex items-center gap-3 text-ember">
               <span className="size-1.5 rounded-full bg-ember" />
-              <span>§ 02</span>
+              <span>02</span>
             </span>
             <span className="md:mt-2">Manifesto / Indices</span>
           </div>
@@ -24,7 +24,7 @@ export function Manifesto() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-15% 0px" }}
             transition={{ duration: 1.1, ease: [0.2, 0.85, 0.2, 1] }}
-            className="text-balance font-display text-[8.5vw] leading-[0.95] tracking-[-0.03em] text-ink md:text-[4.4vw]"
+            className="text-balance font-display text-[8.5vw] leading-[0.95] tracking-[-0.03em] text-ink md:text-[min(4.4vw,3.5rem)]"
           >
             Built for the
             {" "}

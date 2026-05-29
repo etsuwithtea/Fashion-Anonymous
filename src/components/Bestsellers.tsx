@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion } from "motion/react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { bestsellers } from "../lib/data";
 
 export function Bestsellers() {
@@ -19,9 +20,9 @@ export function Bestsellers() {
           <div>
             <div className="mb-4 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-smoke">
               <span className="size-1.5 rounded-full bg-ember" />
-              <span>§ 05 · Most-Chosen</span>
+              <span>05 · Most-Chosen</span>
             </div>
-            <h2 className="font-display text-[12vw] leading-[0.88] tracking-[-0.035em] text-ink md:text-[5.6vw]">
+            <h2 className="font-display text-[12vw] leading-[0.88] tracking-[-0.035em] text-ink md:text-[min(5.6vw,5.5rem)]">
               The Quiet
               <br />
               <span className="font-italic italic font-normal normal-case text-ember tracking-tight">
@@ -36,7 +37,7 @@ export function Bestsellers() {
 
           <div className="flex items-center gap-3">
             <span className="hidden font-mono text-[10px] uppercase tracking-[0.22em] text-smoke md:inline-block">
-              Slide ←/→
+              Slide
             </span>
             <button
               type="button"
@@ -44,7 +45,7 @@ export function Bestsellers() {
               onClick={() => scrollBy(-1)}
               className="grid size-12 place-items-center rounded-full border border-ink/30 text-ink transition-all hover:border-ink hover:bg-ink hover:text-paper"
             >
-              ←
+              <ArrowLeft size={16} />
             </button>
             <button
               type="button"
@@ -52,7 +53,7 @@ export function Bestsellers() {
               onClick={() => scrollBy(1)}
               className="grid size-12 place-items-center rounded-full bg-ink text-paper transition-all hover:bg-ember"
             >
-              →
+              <ArrowRight size={16} />
             </button>
           </div>
         </div>

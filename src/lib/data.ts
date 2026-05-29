@@ -16,8 +16,8 @@ export const collection: Product[] = [
     index: "N° 014",
     name: "Penumbra Hoodie",
     meta: "Heavyweight loopback · Onyx",
-    price: "€ 240",
-    oldPrice: "€ 320",
+    price: "฿ 240",
+    oldPrice: "฿ 320",
     tag: "Drop 06",
     image:
       "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=1400&q=80",
@@ -28,7 +28,7 @@ export const collection: Product[] = [
     index: "N° 022",
     name: "Soliloquy Crewneck",
     meta: "Boiled merino · Bone",
-    price: "€ 195",
+    price: "฿ 195",
     tag: "New",
     image:
       "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=1400&q=80",
@@ -39,8 +39,8 @@ export const collection: Product[] = [
     index: "N° 031",
     name: "Vespers Overcoat",
     meta: "Felted wool · Jet",
-    price: "€ 690",
-    oldPrice: "€ 820",
+    price: "฿ 690",
+    oldPrice: "฿ 820",
     image:
       "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1400&q=80",
     palette: "from-neutral-950/20 to-neutral-950/60",
@@ -50,7 +50,7 @@ export const collection: Product[] = [
     index: "N° 047",
     name: "Quietus Cargo",
     meta: "Heavy ripstop · Ash",
-    price: "€ 280",
+    price: "฿ 280",
     image:
       "https://images.unsplash.com/photo-1521577352947-9bb58764b69a?auto=format&fit=crop&w=1400&q=80",
     palette: "from-stone-900/20 to-stone-900/60",
@@ -79,8 +79,8 @@ export const bestsellers: Product[] = [
     index: "N° 003",
     name: "Shadow Drip Hoodie",
     meta: "Brushed loopback · Carbon",
-    price: "€ 220",
-    oldPrice: "€ 280",
+    price: "฿ 220",
+    oldPrice: "฿ 280",
     tag: "Best-seller",
     image:
       "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=1100&q=80",
@@ -91,7 +91,7 @@ export const bestsellers: Product[] = [
     index: "N° 007",
     name: "Urban Phantom Tee",
     meta: "Heavy jersey · Bone",
-    price: "€ 90",
+    price: "฿ 90",
     image:
       "https://images.unsplash.com/photo-1622445275576-721325763afe?auto=format&fit=crop&w=1100&q=80",
     palette: "from-stone-900/20 to-stone-900/55",
@@ -101,8 +101,8 @@ export const bestsellers: Product[] = [
     index: "N° 011",
     name: "Neon Rebellion Vest",
     meta: "Tech nylon · Ember",
-    price: "€ 320",
-    oldPrice: "€ 410",
+    price: "฿ 320",
+    oldPrice: "฿ 410",
     tag: "Restock",
     image:
       "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=1100&q=80",
@@ -113,7 +113,7 @@ export const bestsellers: Product[] = [
     index: "N° 018",
     name: "Quartier Trouser",
     meta: "Wool flannel · Smoke",
-    price: "€ 240",
+    price: "฿ 240",
     image:
       "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=1100&q=80",
     palette: "from-neutral-900/20 to-stone-900/55",
@@ -123,8 +123,8 @@ export const bestsellers: Product[] = [
     index: "N° 024",
     name: "Atlas Trench",
     meta: "Waxed cotton · Cognac",
-    price: "€ 580",
-    oldPrice: "€ 740",
+    price: "฿ 580",
+    oldPrice: "฿ 740",
     tag: "Drop 06",
     image:
       "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1100&q=80",
@@ -135,7 +135,7 @@ export const bestsellers: Product[] = [
     index: "N° 029",
     name: "Cathedral Knit",
     meta: "Boiled cashmere · Ivory",
-    price: "€ 380",
+    price: "฿ 380",
     image:
       "https://images.unsplash.com/photo-1554568218-0f1715e72254?auto=format&fit=crop&w=1100&q=80",
     palette: "from-stone-900/20 to-stone-900/55",

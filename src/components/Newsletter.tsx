@@ -28,7 +28,7 @@ export function Newsletter() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-15% 0px" }}
               transition={{ duration: 1.1, ease: [0.2, 0.85, 0.2, 1] }}
-              className="font-display text-[11vw] uppercase leading-[0.88] tracking-[-0.035em] text-paper md:text-[5.4vw]"
+              className="font-display text-[11vw] uppercase leading-[0.88] tracking-[-0.035em] text-paper md:text-[min(5.4vw,5rem)]"
             >
               A letter,
               <br />
@@ -58,7 +58,7 @@ export function Newsletter() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your.address@maison.fm"
-                className="w-full bg-transparent font-sans text-[14px] tracking-[-0.005em] text-ink placeholder:text-smoke/70 focus:outline-none"
+                className="w-full min-w-0 bg-transparent font-sans text-[14px] tracking-[-0.005em] text-ink placeholder:text-smoke/70 focus:outline-none"
               />
               <button
                 type="submit"
