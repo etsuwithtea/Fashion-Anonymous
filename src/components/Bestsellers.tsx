@@ -14,30 +14,35 @@ export function Bestsellers() {
 
   return (
     <section className="relative py-24 md:py-32">
-      <div className="mx-auto max-w-[1500px] px-6 md:px-10">
-        {/* Header */}
+      <div className="mx-auto max-w-[1600px] px-4 md:px-6">
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-ash">
-              <span className="text-rose">§ 05</span> · Most-Chosen
+            <div className="mb-4 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.28em] text-smoke">
+              <span className="size-1.5 rounded-full bg-ember" />
+              <span>§ 05 · Most-Chosen</span>
             </div>
-            <h2 className="mt-3 font-display text-[12vw] leading-[0.88] tracking-[-0.04em] text-ink md:text-[6vw]">
-              The quiet
-              <span className="font-italic italic text-rose"> favourites.</span>
+            <h2 className="font-display text-[12vw] leading-[0.88] tracking-[-0.035em] text-ink md:text-[5.6vw]">
+              The Quiet
+              <br />
+              <span className="font-italic italic font-normal normal-case text-ember tracking-tight">
+                favourites.
+              </span>
             </h2>
-            <p className="mt-4 max-w-md font-sans text-[14px] leading-[1.55] text-ash">
+            <p className="mt-5 max-w-md font-sans text-[14px] font-light leading-[1.6] text-smoke">
               Six garments the maison restocks without question — chosen, worn,
               and returned to by clients across six seasons.
             </p>
           </div>
 
-          {/* Carousel controls */}
           <div className="flex items-center gap-3">
+            <span className="hidden font-mono text-[10px] uppercase tracking-[0.22em] text-smoke md:inline-block">
+              Slide ←/→
+            </span>
             <button
               type="button"
               aria-label="Previous"
               onClick={() => scrollBy(-1)}
-              className="grid size-12 place-items-center rounded-full border border-ink/80 font-mono text-ink transition-all hover:bg-ink hover:text-bone"
+              className="grid size-12 place-items-center rounded-full border border-ink/30 text-ink transition-all hover:border-ink hover:bg-ink hover:text-paper"
             >
               ←
             </button>
@@ -45,7 +50,7 @@ export function Bestsellers() {
               type="button"
               aria-label="Next"
               onClick={() => scrollBy(1)}
-              className="grid size-12 place-items-center rounded-full border border-ink/80 font-mono text-ink transition-all hover:bg-ink hover:text-bone"
+              className="grid size-12 place-items-center rounded-full bg-ink text-paper transition-all hover:bg-ember"
             >
               →
             </button>
@@ -53,10 +58,9 @@ export function Bestsellers() {
         </div>
       </div>
 
-      {/* Scroll track — bleeds to edges, padded to align with content */}
       <div
         ref={trackRef}
-        className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-6 pb-4 md:gap-6 md:px-10"
+        className="no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-4 pb-4 md:gap-6 md:px-6"
       >
         {bestsellers.map((p, i) => (
           <motion.article
@@ -65,52 +69,59 @@ export function Bestsellers() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{ duration: 0.9, delay: i * 0.06, ease: [0.2, 0.85, 0.2, 1] }}
-            className="group w-[78vw] shrink-0 snap-start sm:w-[44vw] md:w-[32vw] lg:w-[24vw] xl:w-[19vw]"
+            className="group w-[78vw] shrink-0 snap-start sm:w-[44vw] md:w-[32vw] lg:w-[24vw] xl:w-[20vw]"
           >
             <a href="#" className="block">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-[2px] bg-bone-2">
+              <div className="relative aspect-[3/4] overflow-hidden card-lg bg-paper-2">
                 <img
                   src={p.image}
                   alt={p.name}
-                  className="img-warm absolute inset-0 h-full w-full object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.05]"
+                  className="img-mood absolute inset-0 h-full w-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-[1.05]"
                 />
 
                 {p.tag && (
-                  <span className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-bone/95 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-ink backdrop-blur">
-                    <span className="size-1.5 rounded-full bg-rose" />
+                  <span className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-noir px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-paper">
                     {p.tag}
                   </span>
                 )}
 
-                <span className="absolute right-4 top-4 font-mono text-[10px] uppercase tracking-[0.25em] text-bone mix-blend-difference">
+                <span className="absolute right-4 top-4 rounded-full bg-paper/85 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.22em] text-ink backdrop-blur">
                   {p.index}
                 </span>
 
-                {/* Hover quick-add */}
                 <button
                   type="button"
-                  className="pointer-events-auto absolute inset-x-4 bottom-4 translate-y-3 rounded-full bg-bone/95 py-3 font-mono text-[10px] uppercase tracking-[0.25em] text-ink opacity-0 backdrop-blur transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 hover:bg-ink hover:text-bone"
+                  className="pointer-events-auto absolute inset-x-4 bottom-4 flex translate-y-3 items-center justify-between rounded-full bg-paper/95 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-ink opacity-0 backdrop-blur transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 hover:bg-ink hover:text-paper"
                   onClick={(e) => e.preventDefault()}
                 >
-                  + Reserve · {p.price}
+                  <span>+ Add to bag</span>
+                  <span>{p.price}</span>
                 </button>
               </div>
 
-              <div className="mt-4 flex items-baseline justify-between gap-4">
+              <div className="mt-4 flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="font-display text-[20px] leading-tight text-ink md:text-[22px]">
+                  <h3 className="font-display text-[18px] uppercase tracking-[-0.01em] text-ink md:text-[20px]">
                     {p.name}
                   </h3>
-                  <p className="mt-0.5 font-sans text-[12px] text-ash">{p.meta}</p>
+                  <p className="mt-1 font-sans text-[12px] font-light text-smoke">
+                    {p.meta}
+                  </p>
                 </div>
-                <span className="font-mono text-[12px] tracking-[0.05em] text-ink">
-                  {p.price}
-                </span>
+                <div className="text-right">
+                  <span className="font-mono text-[12px] font-medium tracking-[0.04em] text-ink">
+                    {p.price}
+                  </span>
+                  {p.oldPrice && (
+                    <span className="strike ml-1.5 font-mono text-[11px] tracking-[0.04em]">
+                      {p.oldPrice}
+                    </span>
+                  )}
+                </div>
               </div>
             </a>
           </motion.article>
         ))}
-        {/* trailing spacer so last card has padding */}
         <div className="w-2 shrink-0 md:w-6" aria-hidden />
       </div>
     </section>
